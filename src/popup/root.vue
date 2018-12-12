@@ -1,23 +1,24 @@
 <template lang="pug">
+  v-app
     div
-      el-button(type="primary" @click="tab") New tab 
+      v-btn(color="info" @click="onClick()") Success
+
 </template>
 <script>
   export default {
     data: () => ({
+      text: ''
     }),
     computed: { },
     created () { },
     mounted () { },
     methods: {
-      tab () {
-        chrome.tabs.create({ url: 'pages/app.html' })
+      onClick () {
+        this.text = 'CLICKED!!!!'
       }
     }
   }
 </script>
-<style lang="scss">
-  div {
-    color: blue
-  }
+
+<style lang="stylus">
 </style>
